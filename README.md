@@ -9,69 +9,27 @@
 It contains both programming infrastructure and mathematics,
 as well as tactics that use the former and allow to develop the latter.
 
-## Installation
+# Snake Lemma
 
-You can find detailed instructions to install Lean, mathlib, and supporting tools on [our website](https://leanprover-community.github.io/get_started.html).
+Given commutative diagram
+```
+       A -----f-----> B  -----g-----> C ---> 0
+       |              |               |
+       α              β               γ
+       |              |               |
+       v              v               v
+0 ---> A'-----f'----> B' -----g'----> C
+```
+Construct
+```
+ker α -> ker β -> ker γ --d--> coker α -> coker β -> coker γ
+```
 
-## Experimenting
-
-Got everything installed? Why not start with the [tutorial project](https://leanprover-community.github.io/install/project.html)?
-
-For more pointers, see [Learning Lean](https://leanprover-community.github.io/learn.html).
-
-## Documentation
-
-Besides the installation guides above and [Lean's general
-documentation](https://leanprover.github.io/documentation/), the documentation
-of mathlib consists of:
-
-- [The mathlib docs](https://leanprover-community.github.io/mathlib_docs): documentation [generated
-  automatically](https://github.com/leanprover-community/doc-gen) from the source `.lean` files.
-  In addition to the pages generated for each file in the library, the docs also include pages on:
-  - [tactics](https://leanprover-community.github.io/mathlib_docs/tactics.html),
-  - [commands](https://leanprover-community.github.io/mathlib_docs/commands.html),
-  - [hole commands](https://leanprover-community.github.io/mathlib_docs/hole_commands.html), and
-  - [attributes](https://leanprover-community.github.io/mathlib_docs/attributes.html).
-- A description of [currently covered theories](https://leanprover-community.github.io/theories.html),
-  as well as an [overview](https://leanprover-community.github.io/mathlib-overview.html) for mathematicians.
-- A couple of [tutorial Lean files](docs/tutorial/)
-- Some [extra Lean documentation](https://leanprover-community.github.io/learn.html) not specific to mathlib (see "Miscellaneous topics")
-- Documentation for people who would like to [contribute to mathlib](https://leanprover-community.github.io/contribute/index.html)
-
-Much of the discussion surrounding mathlib occurs in a
-[Zulip chat room](https://leanprover.zulipchat.com/). Since this
-chatroom is only visible to registered users, we provide an
-[openly accessible archive](https://leanprover-community.github.io/archive/)
-of the public discussions. This is useful for quick reference; for a
-better browsing interface, and to participate in the discussions, we strongly
-suggest joining the chat. Questions from users at all levels of expertise are
-welcomed.
-
-## Maintainers:
-
-* Anne Baanen (@Vierkantor): algebra, number theory, tactics
-* Reid Barton (@rwbarton): category theory, topology
-* Mario Carneiro (@digama0): lean formalization, tactics, type theory, proof engineering
-* Bryan Gin-ge Chen (@bryangingechen): documentation, infrastructure
-* Johan Commelin (@jcommelin): algebra, number theory, category theory, algebraic geometry
-* Rémy Degenne (@RemyDegenne): probability, measure theory, analysis
-* Floris van Doorn (@fpvandoorn): measure theory, model theory, tactics
-* Gabriel Ebner (@gebner): tactics, infrastructure, core, formal languages
-* Sébastien Gouëzel (@sgouezel): topology, calculus, geometry, analysis, measure theory
-* Markus Himmel (@TwoFX): category theory
-* Chris Hughes (@ChrisHughes24): algebra
-* Yury G. Kudryashov (@urkud): analysis, topology, measure theory
-* Robert Y. Lewis (@robertylewis): tactics, documentation
-* Heather Macbeth (@hrmacbeth): geometry, analysis
-* Patrick Massot (@patrickmassot): documentation, topology, geometry
-* Bhavik Mehta (@b-mehta): category theory, combinatorics
-* Scott Morrison (@semorrison): category theory, tactics
-* Oliver Nash (@ocfnash): algebra, geometry, topology
-* Adam Topaz (@adamtopaz): algebra, category theory, algebraic geometry
-* Eric Wieser (@eric-wieser): algebra, infrastructure
-
-## Emeritus maintainers:
-
-* Jeremy Avigad (@avigad): analysis
-* Johannes Hölzl (@johoelzl): measure theory, topology
-* Simon Hudon (@cipher1024): tactics
+- [x] φ  : ker α -> ker β
+- [x] ψ  : ker β -> ker γ
+- [x] exact φ ψ
+- [ ] d  : ker γ -> coker α
+- [ ] φ' : coker α -> coker β
+- [ ] exact d φ'
+- [ ] ψ' : coker β -> coker γ
+- [ ] exact φ' ψ'
