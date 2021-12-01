@@ -63,7 +63,7 @@ begin
 end
 
 
-def φ : kernel α ⟶ kernel β := kernel.lift β (kernel.ι α ≫ f) (aux1 comm₁ comm₂)
+def φ : kernel α ⟶ kernel β := kernel.lift _ _ (aux1 comm₁ comm₂)
 def ψ : kernel β ⟶ kernel γ := kernel.lift _ _ (aux2 comm₁ comm₂)
 
 
