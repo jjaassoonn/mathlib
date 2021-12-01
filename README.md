@@ -29,7 +29,8 @@ ker α -> ker β -> ker γ --d--> coker α -> coker β -> coker γ
 - [x] [ψ  : ker β -> ker γ](src/category_theory/abelian/diagram_lemmas/kernel.lean#L67)
 - [x] [exact φ ψ](src/category_theory/abelian/diagram_lemmas/kernel.lean#L114)
 - [ ] d  : ker γ -> coker α
-- [ ] φ' : coker α -> coker β
+- [ ] exact ψ d
+- [x] [φ'  : coker α -> coker β](src/category_theory/abelian/diagram_lemmas/cokernel.lean#L66)
 - [ ] exact d φ'
-- [ ] ψ' : coker β -> coker γ
+- [x] [ψ'  : coker β -> coker γ](src/category_theory/abelian/diagram_lemmas/cokernel.lean#L67)
 - [ ] exact φ' ψ'
