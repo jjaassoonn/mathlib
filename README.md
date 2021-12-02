@@ -33,4 +33,4 @@ ker α -> ker β -> ker γ --d--> coker α -> coker β -> coker γ
 - [x] [φ'  : coker α -> coker β](src/category_theory/abelian/diagram_lemmas/cokernel.lean#L66)
 - [ ] exact d φ'
 - [x] [ψ'  : coker β -> coker γ](src/category_theory/abelian/diagram_lemmas/cokernel.lean#L67)
-- [ ] exact φ' ψ'
+- [x] [exact φ' ψ'](src/category_theory/abelian/diagram_lemmas/cokernel.lean#L112)

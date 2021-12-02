@@ -111,7 +111,7 @@ begin
   simp only [over.coe_hom],
 end
 
-instance : exact (φ comm₁ comm₂) (ψ comm₁ comm₂) :=
+instance exact_φ_ψ : exact (φ comm₁ comm₂) (ψ comm₁ comm₂) :=
 begin
   apply exact_of_pseudo_exact, split,
   { rintros a, rw [←comp_apply, aux3, zero_apply], },
